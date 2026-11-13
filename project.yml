@@ -1,0 +1,23 @@
+name: Spiteful
+options:
+  bundleIdPrefix: com.spiteful
+  deploymentTarget:
+    iOS: "17.0"
+targets:
+  Spiteful:
+    type: application
+    platform: iOS
+    sources: [Spiteful]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.spiteful.app
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Spiteful
+        SWIFT_VERSION: "5.9"
+  SpitefulTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [SpitefulTests]
+    dependencies:
+      - target: Spiteful
